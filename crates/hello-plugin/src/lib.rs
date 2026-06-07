@@ -11,3 +11,8 @@ fn panic(_info: &core::panic::PanicInfo) -> ! {
 pub extern "C" fn greet() -> *const u8 {
     GREETING.as_ptr()
 }
+
+#[no_mangle]
+pub extern "C" fn add(a: i32, b: i32) -> i32 {
+    a.wrapping_add(b)
+}
