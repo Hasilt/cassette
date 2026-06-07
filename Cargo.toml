@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "crates/cassette-host",
+    "crates/hello-plugin",
+]
+resolver = "2"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
