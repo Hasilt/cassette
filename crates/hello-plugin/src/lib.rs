@@ -1,5 +1,8 @@
 #![no_std]
 
+#[no_mangle]
+extern "C" fn rust_eh_personality() {}
+
 const GREETING: &[u8] = b"Hello from Cassette!\0";
 
 #[panic_handler]
